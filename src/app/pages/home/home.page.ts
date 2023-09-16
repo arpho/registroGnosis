@@ -1,28 +1,32 @@
 import { Component, OnInit } from '@angular/core';
-
+import { getAuth,  signOut } from "firebase/auth";
+import { UserModel } from 'src/app/modules/user/models/userModel';
+import { UsersService } from 'src/app/modules/user/services/users.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  blue= true
-  text="sfondo blu"
 
-  changeEvent(ev){
-    this.blue= !this.blue
-    console.log("evento",ev,this.blue)
-    if(this.blue){
-      this.text="sfondo blu"
-    }
-    else{
-      this.text="sfondo bianco"
-    }
+  user:UserModel
+  userName: string
+
+  constructor(
+    private users:UsersService
+  ) { }
+
+  async ngOnInit() {
+ this.user = await this.users.fetchLoggedUser()
+ this.userName = this.user.displayName || this.user.email
+ console.log("user",this.user)
   }
 
-  constructor() { }
+logout(){
+  console.log("logging out")
+  const auth = getAuth();
+  signOut(auth)
+}
 
-  ngOnInit() {
-  }
 
 }

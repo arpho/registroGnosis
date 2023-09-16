@@ -1,14 +1,16 @@
-<ion-header [ngStyle]="{'background-color':blue===true?'#12459e':'white'}">
-  <ion-toolbar [ngStyle]="{'background-color':blue===true?'#12459e':'white'}" style="background-color: red">
+<ion-header>
+  <ion-toolbar>
 
 
     <ion-title
-      [ngStyle]="{'color':blue===true?'white':'#12459e','background-color':blue===true?'#12459e':'white'}">F10SCOUT
+      >Registro Gnosis
 
 
     </ion-title>
-    <h3 [ngStyle]="{'color':blue===true?'white':'#12459e','background-color':blue===true?'#12459e':'white'}">
-      {{"subtitleMessage"|translate}}</h3>
+    <ion-buttons slot="end">
+<ion-button (click)="logout()"><ion-icon name="log-out"></ion-icon> </ion-button>
+    </ion-buttons>
+
   </ion-toolbar>
 </ion-header>
 
@@ -23,8 +25,7 @@
     <!-- 
 <ion-img  src='/assets/images/palla.png' id="palla" style="width:2%" ></ion-img>
 <ion-img id="man" src="/assets/images/giocatore.png" style="width: 20%;"></ion-img> -->
-    <ion-toggle labelPlacement="end" [ngModel]="blue" (ionChange)="changeEvent($event)">Label at the Start</ion-toggle>
-    <p>{{text}}</p>
+ 
   </body>
 
 </ion-content>
