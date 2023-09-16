@@ -60,8 +60,8 @@ usersRef
   }
 
   async getItem(key: string) {
-    const docSnap = await getDoc(this.usersRef)
-     return new UserModel(docSnap.data())
+    const docSnap = await getDocs(this.usersRef)
+     return new UserModel(docSnap.docs[0].data)
   }
 
   FetchRole(level:number){
@@ -71,6 +71,23 @@ usersRef
   getLoggedUser() {
     return this.loggedUser;
   }
+
+    /**
+   * 
+   * @returns Promise<UserModel> the account data of the logged user
+   */
+    fetchLoggedUser() {
+      return new Promise<UserModel>(async (resolve, reject) => {
+        const auth = getAuth()
+        onAuthStateChanged(auth, async (user) => {
+          if (user) {
+            const User = await this.getItem(user.uid)
+            resolve(User)
+          }
+  
+        })
+      })
+    }
 
   //
    callCloudPushUser(user:{}){
