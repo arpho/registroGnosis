@@ -1,0 +1,30 @@
+<ion-header [ngStyle]="{'background-color':blue===true?'#12459e':'white'}">
+  <ion-toolbar [ngStyle]="{'background-color':blue===true?'#12459e':'white'}" style="background-color: red">
+
+
+    <ion-title
+      [ngStyle]="{'color':blue===true?'white':'#12459e','background-color':blue===true?'#12459e':'white'}">F10SCOUT
+
+
+    </ion-title>
+    <h3 [ngStyle]="{'color':blue===true?'white':'#12459e','background-color':blue===true?'#12459e':'white'}">
+      {{"subtitleMessage"|translate}}</h3>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-no-border">
+
+  <body [ngStyle]="{'background-color':blue===true?'#12459e':'white'}"><!-- 
+  <app-switch-language></app-switch-language> -->
+    <app-logout-user></app-logout-user>
+    <app-switch-language></app-switch-language>
+    <!-- <ion-img src="/assets/images/giocatore.png"></ion-img> -->
+    <!-- <div class="underlay-black"></div>  -->
+    <!-- 
+<ion-img  src='/assets/images/palla.png' id="palla" style="width:2%" ></ion-img>
+<ion-img id="man" src="/assets/images/giocatore.png" style="width: 20%;"></ion-img> -->
+    <ion-toggle labelPlacement="end" [ngModel]="blue" (ionChange)="changeEvent($event)">Label at the Start</ion-toggle>
+    <p>{{text}}</p>
+  </body>
+
+</ion-content>

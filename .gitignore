@@ -1,0 +1,105 @@
+node_modules
+www
+scraper
+.angular/cache/13.3.9/angular-webpack/7368380b2e310e8930f081296642b29b797eb3ec/0.pack
+.angular/cache/13.3.9/angular-webpack/7368380b2e310e8930f081296642b29b797eb3ec/index.pack
+.angular/cache/13.3.9/babel-webpack/01eb453c428ecc3265199617c4027cc7.json
+.angular/cache/13.3.9/babel-webpack/05f080a846fc2ef346f6032a60fdd94c.json
+.angular/cache/13.3.9/babel-webpack/07d71e6cba54d70576d0013b4ee530e4.json
+.angular/cache/13.3.9/babel-webpack/08c6fdbc1566dc20790354b462c69dc8.json
+.angular/cache/13.3.9/babel-webpack/094f144bb13a578f54dd96afafdb87eb.json
+.angular/cache/13.3.9/babel-webpack/0c0bcdbe1c9f506f4661a3bdaca76e51.json
+.angular/cache/13.3.9/babel-webpack/0fa7244c4333d8774cec7907ee8802d2.json
+.angular/cache/13.3.9/babel-webpack/19374b0f9fe92591675b9171d0c31503.json
+.angular/cache/13.3.9/babel-webpack/20a2b74fa6d21dff35ef3394226910f3.json
+.angular/cache/13.3.9/babel-webpack/20f645eb20509fe946f917b216340c13.json
+.angular/cache/13.3.9/babel-webpack/273cd0c5b27d5860dc828fe51b58b3c7.json
+.angular/cache/13.3.9/babel-webpack/3002c8b1ce04d1032ca026c1038c453d.json
+.angular/cache/13.3.9/babel-webpack/346dbb179d41d9c4efa59c50247a0967.json
+.angular/cache/13.3.9/babel-webpack/3c41c72bf7826bd5b5d8c73092110b1f.json
+.angular/cache/13.3.9/babel-webpack/3ddcb86a9ac8a75b89f930f669a06cee.json
+.angular/cache/13.3.9/babel-webpack/46a4f3e927b4adccb3c6731149e6c264.json
+.angular/cache/13.3.9/babel-webpack/4921d8d9e3603f53672efc1e7227dc7a.json
+.angular/cache/13.3.9/babel-webpack/49b6bd14639ef9cf0e691716fb220d1a.json
+.angular/cache/13.3.9/babel-webpack/4e22b5d6f217d810d3d1d6e18ef32de0.json
+.angular/cache/13.3.9/babel-webpack/4ed9a868ba0f05d4cec19d8e5e881917.json
+.angular
+
+src/app/configs/credentials.ts
+
+src/app/services/extractions/estrazioni.service.ts
+
+src/assets/fonts/Anton/OFL.txt
+
+favicon_io/
+
+# Specifies intentionally untracked files to ignore when using Git
+# http://git-scm.com/docs/gitignore
+
+*~
+*.sw[mnpcod]
+.tmp
+*.tmp
+*.tmp.*
+UserInterfaceState.xcuserstate
+$RECYCLE.BIN/
+
+*.log
+log.txt
+
+
+/.sourcemaps
+/.versions
+/coverage
+
+# Ionic
+/.ionic
+/www
+/platforms
+/plugins
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-project
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+
+# Miscellaneous
+/.angular
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+/libpeerconnection.log
+testem.log
+/typings
+
+# System files
+.DS_Store
+Thumbs.db
+
+*.xlf

@@ -1,0 +1,258 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+
+app-extraction article p {
+  display: inline;
+  border: solid 1px red;
+  border-radius: 9px;
+  background-color: aliceblue;
+}
+
+app-extraction article p.green {
+  display: inline;
+  border: solid 1px red;
+  border-radius: 9px;
+  background-color: green;
+}
+
+app-extraction article p.red {
+  display: inline;
+  border: solid 1px red;
+  border-radius: 9px;
+  background-color: red;
+}
+
+app-extraction article p.orange {
+  display: inline;
+  border: solid 1px red;
+  border-radius: 9px;
+  background-color: orange;
+}
+
+app-extraction article p.yellow {
+  display: inline;
+  border: solid 1px red;
+  border-radius: 9px;
+  background-color: yellow;
+}
+
+ion-title.md.title-default.hydrated {
+  text-align: center;
+}
+
+app-numero-estratto.ambata {
+  background: radial-gradient(green, transparent);
+  font-size: 3rem;
+}
+
+app-logout-user {
+
+  position: absolute;
+  right: 0px
+}
+
+app-logout-user p {
+  font-size: 0.75rem;
+}
+
+.menuItem {
+  border: solid 1px #f4f5f8;
+  border-radius: 1rem;
+  padding: 9px;
+  margin: 6px;
+  text-align: center;
+  box-shadow: #f5f5dc 2px 3px;
+  width: 80%;
+
+  margin-top: 2rem;
+}
+
+app-numero-estratto p {
+  background: antiquewhite;
+  border-radius: 9px;
+  size: auto;
+  font-size: 1.5rem;
+  width: fit-content;
+  background-color: aliceblue;
+}
+
+
+
+
+.browsable app-extraction article p {
+  display: inline;
+  border: solid 1px white;
+  border-radius: 9px;
+  background-color: white;
+}
+
+
+
+.browsable app-extraction article p.green {
+  background-color: green
+}
+
+
+
+p.date {
+  font-weight: bold;
+  /* align-content: center; */
+  text-align: c;
+  left: 3em;
+  position: relative;
+}
+
+app-weels-viewer {
+  font-size: 1rem;
+}
+
+
+ion-grid.ambate {
+  position: relative;
+  left: 7rem;
+}
+
+app-extraction {
+  padding-left: 6rem;
+}
+
+p.info {
+  font-size: large;
+  font-family: cursive;
+  font-weight: bolder;
+  color: darkblue;
+}
+
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: .2rem;
+  background: #313639;
+  color: #f9f9f9;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+  font-size: .9rem;
+}
+
+app-extraction-frame article app-weel-frame.even ion-row {
+  /* color: green; */
+  background-color: #efedda;
+}
+
+app-extraction-frame article app-weel-frame.odd ion-row {
+  /* color: #ddd; */
+  background-color: #ddd;
+}
+
+article.highlighted {
+  border: 3px solid red;
+  background-color: white;
+  border-radius: 0.5rem;
+  width: 19.6rem;
+  height: 2.5rem;
+}
+
+ion-col.md.hydrated {
+
+  padding-right: 2px;
+}
+
+
+
+app-extraction article p.gold {
+  display: inline;
+  border: solid 1px red;
+  border-radius: 9px;
+  background-color: goldenrod;
+}
+
+p.repetition {
+  background-color: yellow;
+}
+
+@font-face {
+  font-family: 'Anton';
+  src: url(./assets/fonts/Anton/Anton-Regular.ttf);
+}
+
+ion-content {
+  font-family: Anton !important;
+}
+
+label {
+  font-family: Anton !important;
+}
+
+p {
+  font-family: Anton !important;
+}
+
+ion-select {
+  font-family: Anton;
+}
+
+
+app-suggested-numbers {
+  text-align: center;
+  /* background-color: rebeccapurple; */
+}
+
+ion-modal.fullscreen {
+  --width: 100%;
+  --height: 100%;
+  --border-radius: 0;
+}
+
+h1.itemTitle {
+  font-size: 0.8rem;
+  width: 14rem;
+}
+
+app-weel-frame ion-col.md.hydrated {
+  width: 10em;
+}
+
+app-extraction-frame article {
+  width: 20em;
+}
+
+app-extraction-frame ion-row.md.hydrated {
+  width: 14.5em;
+}
+
+app-weel-frame app-numero-estratto p.green {
+  background-color: green;
+}
+
+app-extraction-frame ion-row.md.hydrated {
+  height: 2em;
+}
+
+app-extraction-frame ion-row.md.hydrated.narrow {
+  height: 0.5em;
+}

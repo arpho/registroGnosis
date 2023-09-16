@@ -1,0 +1,31 @@
+<ion-header>
+
+  <app-logout-user></app-logout-user>
+
+</ion-header>
+
+<ion-content>
+
+  <ion-content>
+
+
+
+    <ion-list id="inbox-list">
+      <ion-list-header>
+      
+      </ion-list-header>
+
+
+      <ion-item class="menuItem" routerDirection="root" lines="none" detail="false" routerLinkActive="selected"
+        (click)="p.onClick()" *ngFor="let p of appPages; let i = index">
+        <ion-icon color="danger" slot="start" name="arrow-forward"></ion-icon>
+        <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'" *ngIf="!p.src"></ion-icon>
+        <ion-img slot="start" src={{p.src}} *ngIf="p.src" style="height:40px"></ion-img>
+        <ion-icon src=""></ion-icon>
+        <ion-label style=" background-color:black; color: white;">{{ p.title }}</ion-label>
+      </ion-item>
+    </ion-list>
+  
+  </ion-content>
+
+</ion-content>

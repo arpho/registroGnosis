@@ -1,0 +1,11 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>completeRegistration</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <app-dynamic-form [questions]="usersFields" (interactiveSubmit)="filter($event)" (singleSubmit)="submit($event)" [submitText]="submitText"></app-dynamic-form>
+
+</ion-content>

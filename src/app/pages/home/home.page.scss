@@ -1,0 +1,58 @@
+ion-title.md.title-default.hydrated {
+    text-align: center;
+    font-size: 5vw;
+    color: white;
+    font-weight: bold;
+  //  background-color: #12459e;
+}
+
+h3 {
+    font-size: 22px;
+    background-color: #12459e;
+    text-align: center;
+    margin: 0;
+    color: white;
+}
+/* 
+@keyframes pallone{
+  from {
+    transform: translateY(100vh);
+  }
+  50% {
+    transform: translateY(56vh);
+  }
+  to {
+    transform: translateY(12vh);
+  }
+}
+@keyframes uomo{
+  from {
+    transform: translateX(100vw);
+  }
+  50% {
+    transform: translateX(75vw);
+  }
+  to {
+    transform: translateX(50vw);
+  }
+
+}
+  #palla {
+    position: relative;
+    width: fit-content;
+    left: 48vw;
+   height: 12vh;
+    animation-name: pallone;
+    animation-duration: 4s;
+}
+  #man {
+    position: relative;
+    width: fit-content;
+    left: 47vw;
+    top: -10vh;
+    animation-name: uomo;
+    animation-duration: 4s;
+    animation-delay: 2s;
+    animation-timing-function: ease-in-out;
+}
+ */
