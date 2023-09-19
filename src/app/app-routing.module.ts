@@ -53,6 +53,23 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule)
   },
 
+  {
+    path: 'create',
+    loadChildren: () => import('./pages/temi/create/create.module').then( m => m.CreatePageModule)
+  },
+  {
+    path: 'list-temi',
+    loadChildren: () => import('./pages/temi/list-temi/list-temi.module').then( m => m.ListTemiPageModule)
+  },
+  {
+    path: 'create-tema',
+    loadChildren: () => import('./pages/temi/create-tema/create-tema.module').then( m => m.CreateTemaPageModule)
+  },
+  {
+    path: 'edit-tema',
+    loadChildren: () => import('./pages/temi/edit-tema/edit-tema.module').then( m => m.EditTemaPageModule)
+  },
+
 
 ];
 
