@@ -54,10 +54,6 @@ const routes: Routes = [
   },
 
   {
-    path: 'create',
-    loadChildren: () => import('./pages/temi/create/create.module').then( m => m.CreatePageModule)
-  },
-  {
     path: 'list-temi',
     loadChildren: () => import('./pages/temi/list-temi/list-temi.module').then( m => m.ListTemiPageModule)
   },
