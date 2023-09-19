@@ -14,7 +14,7 @@ reference:string //it s the reference name in the realtime database
    $items: BehaviorSubject<Array<ItemModelInterface>> // = new BehaviorSubject([])
    items_list: Array<ItemModelInterface> // = []
    db:Database
-   itemsListRef:DatabaseReference
+   itemsListRef?:DatabaseReference
    readonly items:Observable<Array<ItemModelInterface>>
 
     /**get one item from firebase
