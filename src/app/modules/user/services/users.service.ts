@@ -61,7 +61,8 @@ usersRef
 
   async getItem(key: string) {
     const docSnap = await getDocs(this.usersRef)
-     return new UserModel(docSnap.docs[0].data)
+    console.log("users snap",docSnap.docs[0].data())
+     return new UserModel(docSnap.docs[0].data())
   }
 
   FetchRole(level:number){
