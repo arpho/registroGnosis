@@ -25,6 +25,7 @@ export class UsersService implements ItemServiceInterface, OnInit {
   loggedUser: Observable<UserModel> = this._loggedUser.asObservable()
   readonly items: Observable<Array<UserModel>> = this.$items.asObservable()
 static loggedUser:UserModel
+Collection="users"
 db: any
 usersRef:any
   constructor() {
@@ -55,13 +56,13 @@ usersRef:any
   }
 
   authStateChangeHandler = async () => {
-    const q = query(collection(this.db, "users"));
+    const q = query(collection(this.db, this.Collection));
     const querySnapshot = await getDocs(q);
     this.$items.next( querySnapshot.docs.map(snap=>new UserModel().load(snap.data()).setKey(snap.id)))
   }
 
   async getItem(key: string) {
-    const docRef = doc(this.db, "users", key);
+    const docRef = doc(this.db, this.Collection, key);
     const docSnap = await getDoc(docRef)
     console.log("users snap",docSnap.data())
      return new UserModel(docSnap.data())
@@ -124,13 +125,13 @@ console.error(error);
 
   async  setItem(item: ItemModelInterface) {
  
-     return  setDoc(doc(this.db,"users",item.key),item.serialize())
+     return  setDoc(doc(this.db,this.Collection,item.key),item.serialize())
    }
 
 
    async  createItem(item: ItemModelInterface) {
   
-      return  setDoc(doc(this.db,"users",item.key),item.serialize())
+      return  setDoc(doc(this.db,this.Collection,item.key),item.serialize())
     }
    
   getEntitiesList(): DatabaseReference{
@@ -138,6 +139,6 @@ console.error(error);
   }
 
  async  updateItem(item: ItemModelInterface) {
-    return setDoc(doc(this.db,"users",item.key),item.serialize())
+    return setDoc(doc(this.db,this.Collection,item.key),item.serialize())
   }
 }
