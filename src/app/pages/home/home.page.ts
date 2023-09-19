@@ -19,7 +19,11 @@ export class HomePage implements OnInit {
   async ngOnInit() {
  this.user = await this.users.fetchLoggedUser()
  this.userName = this.user.displayName || this.user.email
- console.log("user",this.user)
+ console.log("user",this.userName)
+ console.log(this.hello())
+  }
+  hello(){
+    return `paz inverential ${this.userName}`
   }
 
 logout(){

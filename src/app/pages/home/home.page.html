@@ -8,7 +8,7 @@
 
     </ion-title>
     <ion-buttons slot="end">
-<ion-button (click)="logout()"><ion-icon name="log-out"></ion-icon> </ion-button>
+<ion-button (click)="logout()">{{hello()}}<ion-icon name="log-out"></ion-icon> </ion-button>
     </ion-buttons>
 
   </ion-toolbar>
@@ -16,7 +16,7 @@
 
 <ion-content class="ion-no-border">
 
-  <body [ngStyle]="{'background-color':blue===true?'#12459e':'white'}">
+  <body style="background-color: gainsboro;">
   
  
   </body>
