@@ -12,6 +12,7 @@ import "firebase/firestore";
 import { initializeApp } from "firebase/app";
 import { credentials } from "src/app/configs/credentials";
 import {  collection, deleteDoc, doc, getDoc, getDocs, getFirestore, query, setDoc } from "firebase/firestore";
+import { CollectionReference, DocumentData } from "@google-cloud/firestore";
 
 @Injectable({
   providedIn: "root"
@@ -25,7 +26,7 @@ export class UsersService implements ItemServiceInterface, OnInit {
   readonly items: Observable<Array<UserModel>> = this.$items.asObservable()
 static loggedUser:UserModel
 db: any
-usersRef
+usersRef:any
   constructor() {
     this.loadDataAndPublish()
     const app = initializeApp(credentials.firebase)
@@ -60,9 +61,10 @@ usersRef
   }
 
   async getItem(key: string) {
-    const docSnap = await getDocs(this.usersRef)
-    console.log("users snap",docSnap.docs[0].data())
-     return new UserModel(docSnap.docs[0].data())
+    const docRef = doc(this.db, "users", key);
+    const docSnap = await getDoc(docRef)
+    console.log("users snap",docSnap.data())
+     return new UserModel(docSnap.data())
   }
 
   FetchRole(level:number){
